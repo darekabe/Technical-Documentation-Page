@@ -4,9 +4,112 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <nav id="navbar">
+        <header  id="Navigation_Bar">Navigation Bar</header>
+        <ul id="navLinks">
+            <li class="navLink"><a href="#Introduction_to_HTML" class="nav-link">Introduction to HTML</a></li>
+            <li class="navLink"><a href="#HTML_Head" class="nav-link">HTML Head</a></li>
+            <li class="navLink"><a href="#HTML_Text_Fundamentals" class="nav-link">HTML Text Fundamentals</a></li>
+            <li class="navLink"><a href="#Creating_Hyperlinks" class="nav-link">Creating Hyperlinks</a></li>
+            <li class="navLink"><a href="#Debugging_HTML" class="nav-link">Debugging HTML</a></li>
+          </ul> 
+        </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction_to_HTML">
+            <header>Introduction to HTML</header>
+            <p>At its heart, HTML is a fairly simple language made up of elements, which can be applied to pieces of text to 
+                give them different meaning in a document (Is it a paragraph? Is it a bulleted list? 
+                Is it part of a table?), structure a document into logical sections (Does it have a header? Three columns of content? 
+                A navigation menu?), and embed content such as images and videos into a page. 
+                This module will introduce the first two of these and introduce fundamental concepts and syntax you need to know to understand HTML.</p>
+        </section>
+        <section class="main-section" id="HTML_Head">
+            <header>HTML Head</section>
+                <p class="p1">The HTML head is the contents of the <code> &lt;head&gt; </code> element — unlike the contents of the <code> &lt;body&gt; </code> element (which are displayed on the page when loaded 
+                    in a browser), the head's content is not displayed on the page. Instead, the head's job is to contain metadata about the document. 
+                    In the above example, the head is quite small:</p>
+        <section class="main-section" id="HTML_Text_Fundamentals">
+            <header>HTML Text Fundamentals</header>
+            <p class="p1">One of HTML's main jobs is to give text structure so that a browser can display an HTML document the way its developer intends.
+                This article explains the way HTML can be used to structure a page of text by adding headings and paragraphs, emphasizing words, creating 
+                lists, and more.</p>
+            <p class="p2">Most structured text consists of headings and paragraphs, whether you are reading a story, a newspaper, a college textbook, a magazine, etc.
+
+                An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.
+                
+                Structured content makes the reading experience easier and more enjoyable.
+                
+                In HTML, each paragraph has to be wrapped in a <code> &lt;p&gt; </code>  element, like so:<code> &lt;/p&gt; </code>  </p>
+            <p class="p2">
+
+                <code>
+                    <code> &lt;h1&gt; </code>The Crushing Bore<code> &lt;/h1&gt; </code> <br>
+
+                    <code> &lt;p&gt; </code>By Chris Mills<code> &lt;/p&gt; </code><br>
+
+                    <code> &lt;h2&gt; </code>Chapter 1: The dark night<code> &lt;/h2&gt; </code><br>
+
+                    <code> &lt;p&gt; </code>It was a dark night. Somewhere, an owl hooted. The rain lashed down on the ...<code> &lt;/p&gt; </code><br>
+
+                    <code> &lt;h2&gt; </code><br>Chapter 2: The eternal silence<code> &lt;/h2&gt; </code><br>
+
+                    <code> &lt;p&gt; </code>Our protagonist could not so much as a whisper out of the shadowy figure ...<code> &lt;/p&gt; </code><br>
+
+                    <code> &lt;h3&gt; </code>The specter speaks<code> &lt;/h3&gt; </code><br>
+
+                    <code> &lt;p&gt; </code>Several more hours had passed, when all of a sudden the specter sat bolt upright and exclaimed, "Please have mercy on my soul!"<code> &lt;/p&gt; </code>
+                    </code><br><br>
+                    It's really up to you what the elements involved represent, as long as the hierarchy makes sense. 
+                    You just need to bear in mind a few best practices as you create such structures:
+                    <ul>
+                        <li class="indent">Preferably, you should use a single <code> &lt;h1&gt; </code> per page—this is the top level heading, and all others sit below this in the hierarchy.</li>
+                        <li class="indent">Make sure you use the headings in the correct order in the hierarchy.</li>
+                        <li class="indent"> Don't use <code> &lt;h3&gt; </code> elements to represent subheadings, followed by <code> &lt;h2&gt; </code> elements to 
+                            represent sub-subheadings—that doesn't make sense and will lead to weird results.</li>
+                        <li class="indent">Of the six heading levels available, you should aim to use no more than three per page, unless you feel it is necessary.</li>
+                        <li class="indent">Documents with many levels (for example, a deep heading hierarchy) become unwieldy and difficult to navigate. On such occasions, it is advisable 
+                            to spread the content over multiple pages if possible.</li>
+                    </ul>
+
+            </p>
+        </section>
+        <section class="main-section"  id="Creating_Hyperlinks">
+            <header>Creating HyperLinks</header>
+            <p class="p1">Hyperlinks are really important — they are what makes the web a web. 
+                This article shows the syntax required to make a link and discusses best practices for links.</p>
+                <p class="p2">
+                    A basic link is created by wrapping the text or other content, see Block level links, inside an <a> element and using the href attribute, also known as a Hypertext Reference, or target, that contains the web address.<br>
+                        <code>
+                        <code>&lt;p&gt; </code> I'm creating a link to <br>
+                        <code>&lt;a&gt; </code> href="https://www.mozilla.org/en-US/">the Mozilla homepage<code>&lt;/a&gt; </code>.
+                        <br><code>&lt;/p&gt; </code>
+                        </code><br>
+                        This gives us the following result:
+                        <p class="p2">I'm creating a link to
+                            <a href="https://www.mozilla.org/en-US/">the Mozilla homepage</a>.
+                            </p>
+                </p>
+        </section>
+        <section class="main-section"  id="Debugging_HTML">
+            <header>Debugging HTML</header>
+            <p class="p1">When writing code of some kind, everything is usually fine, until that dreaded moment when an error occurs — you've done 
+                something wrong, so your code doesn't work — either not at all, or not quite how you wanted it to. For example, the following shows 
+                an error reported when trying to compile a simple program written in the Rust language.
+
+               <p class="p2"> A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. 
+                The error message reported is error: unterminated double quote string.Here, the error message is relatively easy to understand — "unterminated 
+                double quote string". If you look at the listing, you can probably see how println!(Hello, world!"); might logically be missing a double quote. 
+                However, error messages can quickly get more complicated and less easy to interpret as programs get bigger, and even simple cases can look a little 
+                intimidating to someone who doesn't know anything about Rust. </p>
+                
+                <p class="p2">Debugging doesn't have to be scary though —  the key to being comfortable with writing and debugging any programming language or code is 
+                familiarity with both the language and the tools.</p></p>
+        </section>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
